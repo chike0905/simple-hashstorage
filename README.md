@@ -7,25 +7,38 @@ To implement applications based on [IPFS](https://ipfs.io/)/DHT-based storage, y
 
 I think those storages have a feature that when you input a file, you can get the hash value of the file. Additionally, you can also get the file by the hash value. This scheme achieves verifiability of the integrity of the file that you get from storage. You can verify the integrity by verifying the hash value as an input and the hash value of the file that you get from the storage.
 
-## Environment
-- Python 3.6.5
-    - Flask 1.1.1
+## Enviroment
+- Dependency is managed by poetry. see `pyproject.toml`.
+### Develop
+- Poetory 1.1.1
+    - Python 3.7.3
+### Test Enviroment
+- pytest 6.0.1
+
+## Installation
+### From Source Code / Install via pip
+- Clone this repository
+```
+https://github.com/chike0905/simple-hashstorage.git
+```
+- Build
+    - Dumped install file in `dist`
+    ```
+    poetry build
+    ```
+    - Install via pip
+    ```
+    pip install dist/hashstorage-0.1.0.tar.gz 
+    ```
 
 ## Usage
-- Install Flask
+- Launch HashStorage.
+    - You can specify storage dump dirctory. default: `$(pwd)/.hashstorage`
 ```
-pip install Flask
+hashstorage-cli -d DATADIR
 ```
-- Lanch Hashstorage
-    - Hashstorage lanched at `localhost:6666`
-```
-python hashstorage.py
-```
-
 - Store & Get a file via HTTP
-    - You can store a base64 encoded file via HTTP.
-    - You can see how to encode in python scripts in `test_hashstorage.py`.
-    - When you terminate Hashstorage, Stored files are dumped in `storage.json`.
+  - see `tests/test_cli.py`
 
 ## Licence
 WTFPL
