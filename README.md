@@ -21,15 +21,17 @@ I think those storages have a feature that when you input a file, you can get th
 ```
 https://github.com/chike0905/simple-hashstorage.git
 ```
+
 - Build
     - Dumped install file in `dist`
-    ```
-    poetry build
-    ```
-    - Install via pip
-    ```
-    pip install dist/hashstorage-0.1.0.tar.gz 
-    ```
+```
+poetry build
+```
+
+- Install via pip
+```
+pip install dist/hashstorage-0.1.0.tar.gz 
+```
 
 ## Usage
 - Launch HashStorage.
