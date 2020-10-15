@@ -3,6 +3,7 @@ name = "hashstorage"
 version = "0.1.0"
 description = "Implementation of Simple-HashStorage."
 authors = ["chike0905 <chike@sfc.wide.ad.jp>"]
+repository = "https://github.com/chike0905/simple-hashstorage"
 license = "WTFPL"
 
 [tool.poetry.dependencies]

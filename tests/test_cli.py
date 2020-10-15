@@ -53,6 +53,6 @@ def test_geFromHashStorage(setupHashStorageThread):
     res = response.json()
     
     assert res["result"] == True
-    assert res["key"] == "dummy"
+    assert res["value"] == "dummy"
 
 

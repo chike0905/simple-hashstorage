@@ -36,7 +36,7 @@ def GetGetReq():
     params = request.json
     data = hs.get(params["key"])
     if data:
-        resbody = {"result": True, "key": data}
+        resbody = {"result": True, "value": data}
     else:
         resbody = {"result": False, "error": "Key (%s) is not found"%params["key"] }
     return make_response(jsonify(resbody))
